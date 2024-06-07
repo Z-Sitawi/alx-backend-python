@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
 """ Module documentation """
-from typing import Mapping, Any, Union, TypeVar
+from typing import Optional, TypeVar, List
 
-T = TypeVar("T")
+T = TypeVar('T')
 
-
-def safely_get_value(
-    dct: Mapping, key: Any, default: Union[T, None] = None
-) -> Union[Any, T]:
-    """Function documentation"""
-    if key in dct:
-        return dct[key]
+def safe_first_element(lst: List[T]) -> Optional[T]:
+    """Returns the first element of the list if it exists, otherwise returns None."""
+    if lst:
+        return lst[0]
     else:
-        return default
+        return None
