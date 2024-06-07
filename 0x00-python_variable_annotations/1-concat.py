@@ -6,8 +6,8 @@
 
 def concat(str1: str, str2: str) -> str:
     """
-    :param str1: first str number
-    :param str2: second str number
+    :param str1: first str
+    :param str2: second str
     :return: a concatenated string
     """
     return str1 + str2
