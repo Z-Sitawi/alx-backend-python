@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-""" module doc """
-from typing import List, Tuple
+""" Module documentation """
+from typing import Iterable, Sequence, Tuple, List
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
-    """
-    :param lst: list of strings
-    :return: a list of tuples
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """ Returns a list of tuples where each tuple contains
+        a sequence and its length.
     """
     return [(i, len(i)) for i in lst]
